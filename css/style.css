@@ -87,7 +87,7 @@
   width: 100%;
   margin-bottom: 10px;
   border: 1px solid black;
-  min-height: 30px;
+  min-height: 20px;
   overflow: hidden;
   position: relative;
 }
@@ -106,7 +106,7 @@
   box-sizing: border-box;
   float: left;
   width: 100%;
-  min-height: 150px;
+  min-height: 50px;
   border: 1px solid black;
 }
 
@@ -245,6 +245,8 @@ body, html {
   width: 100vw;
   margin: 0px auto;
   box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: visible;
   font-size: 16px;
 }
 
@@ -255,19 +257,24 @@ body .whole-width, html .whole-width {
 .menu-bar {
   background-color: aqua;
   border: 1px solid black;
-  height: 4em;
-  display: none;
+  height: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
 
 .menu-bar a {
   text-decoration: none;
-  color: wheat;
+  color: black;
   font-size: 1.2em;
+  border: 1px solid black;
+  flex: 1;
 }
 
 .menu-bar a:visited {
   background-color: yellow;
-  color: wheat;
+  color: black;
 }
 
 .menu-bar a:hover {
@@ -297,9 +304,32 @@ body .whole-width, html .whole-width {
 }
 
 .about {
-  background-color: darkgray;
-  padding-left: 1em;
-  padding-right: 1em;
+  background-image: url("../images/bg_1.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.about .about_text {
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  background-color: rgba(139, 142, 140, 0.7);
+  font-size: 1.4em;
+}
+
+.programs {
+  background-color: blueviolet;
+}
+
+.programs .program_1 {
+  background-color: yellow;
+}
+
+.programs .program_2 {
+  background-color: pink;
 }
 
 /*wersja responsywna start*/
