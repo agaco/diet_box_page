@@ -1,0 +1,15 @@
+$background-color: black;
+$font-color: white;
+
+$secondary-color: blue;
+$links-color: lightgreen;
+$footer-color: pink;
+$pink-color: #eb07a3;
+$width: 1000px;
+$value_radius: 4px;
+$default-font-size: 15px;
+
+//funckja
+@function contentHeight($height) {
+	@return $height / 3;
+}

@@ -1,0 +1,74 @@
+/*pierwszy komentarz css*/
+@import "mixines";
+@import "fonts";
+@import "grid";
+@import "variables";
+
+
+
+body, html {
+    color: black;
+    background-color: white;
+	width: 100vw;
+    margin: 0px auto;
+	box-sizing: border-box;
+	//overflow-y: hidden;
+	//overflow-x: visible;
+	font-size: $default-font-size;
+	.whole-width {
+		height: 100vh;
+	}
+}
+
+.menu-bar {
+	background-color: aqua;
+	border: 1px solid black;
+	height: 4em;
+	display: none;
+	a {
+		text-decoration: none;
+		color: wheat;
+		font-size: 1.2em;
+		&:visited {
+			background-color: yellow;
+			color: wheat;
+		}
+		&:hover {
+			background-color: pink;
+			color: brown;
+		}
+		
+	}
+}
+
+.menu-btn {
+	width: 4em;
+	height: 2em;
+	font-size: 0.7em;
+	background-color: darkslategray;
+	color: white;
+	display: flex;
+	float: right;
+	&:hover {
+		background-color: darkgrey;
+		color: darkolivegreen;
+	}
+	
+	
+}
+.footer-bar {
+	background-color: greenyellow;
+	border: 1px solid black;
+	height: 4em;
+}
+.about {
+	background-color: darkgray;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/*wersja responsywna start*/
+
+
+
+

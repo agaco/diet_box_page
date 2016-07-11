@@ -1,0 +1,27 @@
+@mixin borderRadius ($border) {
+    border-radius: 50% / 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	border-color: $border;
+ }
+
+
+@mixin littleCircle ($size) {
+	border-radius: 50%; 
+	-webkit-border-radius: 50%; 
+	-moz-border-radius: 50%;
+	width: $size;
+	height: $size;
+	background-color: white;
+}
+
+@mixin button ($width, $height) {
+	background-color: black;
+	color: #45add8;
+	width: $width;
+	height: $height;
+	//&:hover {
+		//color: white;
+		//background-color: #45add8;
+		//}
+}
