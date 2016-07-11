@@ -1,9 +1,7 @@
 $background-color: black;
 $font-color: white;
 $default-font-size: 16px;
+$main-color-blue: #007ac7;
+$sec-color-green: #b6d143;
 
 
-//funckja
-@function contentHeight($height) {
-	@return $height / 3;
-}

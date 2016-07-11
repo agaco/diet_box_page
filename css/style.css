@@ -1,93 +1,8 @@
 /*pierwszy komentarz css*/
-@font-face {
-  font-family: 'ralewayblack';
-  src: url("fonts/raleway-black.woff2") format("woff2"), url("fonts/raleway-black.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewayblack_italic';
-  src: url("fonts/raleway-blackitalic.woff2") format("woff2"), url("fonts/raleway-blackitalic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewaybold';
-  src: url("fonts/raleway-bold.woff2") format("woff2"), url("fonts/raleway-bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewaybold_italic';
-  src: url("fonts/raleway-bolditalic.woff2") format("woff2"), url("fonts/raleway-bolditalic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewayextrabold';
-  src: url("fonts/raleway-extrabold.woff2") format("woff2"), url("fonts/raleway-extrabold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewayextrabold_italic';
-  src: url("fonts/raleway-extrabolditalic.woff2") format("woff2"), url("fonts/raleway-extrabolditalic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewayextralight';
-  src: url("fonts/raleway-extralight.woff2") format("woff2"), url("fonts/raleway-extralight.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewayextralight_italic';
-  src: url("fonts/raleway-extralightitalic.woff2") format("woff2"), url("fonts/raleway-extralightitalic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewayitalic';
-  src: url("fonts/raleway-italic.woff2") format("woff2"), url("fonts/raleway-italic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewaylight';
-  src: url("fonts/raleway-light.woff2") format("woff2"), url("fonts/raleway-light.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewaylight_italic';
-  src: url("fonts/raleway-lightitalic.woff2") format("woff2"), url("fonts/raleway-lightitalic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ralewaymedium';
-  src: url("fonts/raleway-medium.woff2") format("woff2"), url("fonts/raleway-medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .grid-container .row {
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid black;
-  min-height: 20px;
+  min-height: 30px;
   overflow: hidden;
   position: relative;
 }
@@ -245,9 +160,9 @@ body, html {
   width: 100vw;
   margin: 0px auto;
   box-sizing: border-box;
-  overflow-y: hidden;
-  overflow-x: visible;
+  padding: 0;
   font-size: 16px;
+  font-family: 'Lato', sans-serif;
 }
 
 body .whole-width, html .whole-width {
@@ -255,31 +170,35 @@ body .whole-width, html .whole-width {
 }
 
 .menu-bar {
-  background-color: aqua;
+  display: inline-flex;
+  background-color: #007ac7;
   border: 1px solid black;
-  height: 1em;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
+  justify-content: flex-end;
+  padding-right: 2em;
+  padding-left: 2em;
+  height: 3em;
 }
 
 .menu-bar a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.2em;
-  border: 1px solid black;
   flex: 1;
+  padding-top: 1.3em;
+  text-decoration: none;
+  text-align: right;
+  color: black;
 }
 
 .menu-bar a:visited {
-  background-color: yellow;
-  color: black;
+  background-color: #007ac7;
+  color: white;
 }
 
 .menu-bar a:hover {
-  background-color: pink;
-  color: brown;
+  background-color: #61c2ff;
+  color: white;
+}
+
+.menu-bar img {
+  float: left;
 }
 
 .menu-btn {
@@ -288,7 +207,7 @@ body .whole-width, html .whole-width {
   font-size: 0.7em;
   background-color: darkslategray;
   color: white;
-  display: flex;
+  display: none;
   float: right;
 }
 
@@ -307,29 +226,58 @@ body .whole-width, html .whole-width {
   background-image: url("../images/bg_1.jpg");
   background-size: cover;
   height: 100vh;
-  padding-left: 5em;
-  padding-right: 5em;
+  padding: 0;
 }
 
 .about .about_text {
   vertical-align: middle;
   margin: 0 auto;
-  width: 80%;
-  height: auto;
+  width: 70%;
+  height: 30%;
   background-color: rgba(139, 142, 140, 0.7);
-  font-size: 1.4em;
+  font-size: 1em;
+  color: white;
+}
+
+.about .about_text2 {
+  vertical-align: sub;
+  margin: 0 auto;
+  width: 60%;
+  height: 20%;
+  background-color: rgba(44, 94, 152, 0.79);
+  font-size: 1em;
+  color: white;
 }
 
 .programs {
-  background-color: blueviolet;
+  height: 100vh;
+  align-self: center;
+  background-color: #b6d143;
+  display: flex;
+  flex-direction: column;
 }
 
-.programs .program_1 {
-  background-color: yellow;
+.programs div {
+  display: flex;
+  margin: 1em;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #007ac7;
+  border: 1px solid red;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 
-.programs .program_2 {
-  background-color: pink;
+.programs div img {
+  width: 100px;
+  align-self: center;
+  transition: 1s;
+  padding-bottom: 1.2em;
+}
+
+.programs div img:hover {
+  transform: scale(1.1);
 }
 
 /*wersja responsywna start*/
