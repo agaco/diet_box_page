@@ -38,6 +38,7 @@ $grid-columns: 12;
 	.col-xs-2 {width: 16.66666667%;}
 	.col-xs-1 {width: 8.33333333%;}
 
+	
 @media only screen and (min-width: 640px) {
     /* For tablets: */
     .col-m-1 {width: 8.33%;}
@@ -71,6 +72,11 @@ $grid-columns: 12;
 	.col-10 {width: 10 * (100% / $grid-columns);}
 	.col-11 {width: 11 * (100% / $grid-columns);}
 	.col-12 {width: 12 * (100% / $grid-columns);}
+		   
+		   .programs { 
+			   height: 100vh;
+		   
+		   }
 }
 }
 

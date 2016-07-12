@@ -6,13 +6,13 @@
  }
 
 
-@mixin littleCircle ($size) {
+@mixin littleCircle ($size, $color) {
 	border-radius: 50%; 
 	-webkit-border-radius: 50%; 
 	-moz-border-radius: 50%;
 	width: $size;
 	height: $size;
-	background-color: white;
+	background-color: $color;
 }
 
 @mixin button ($width, $height) {
@@ -20,8 +20,4 @@
 	color: #45add8;
 	width: $width;
 	height: $height;
-	//&:hover {
-		//color: white;
-		//background-color: #45add8;
-		//}
 }

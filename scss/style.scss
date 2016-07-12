@@ -3,15 +3,18 @@
 @import "fonts";
 @import "grid";
 @import "variables";
+@import "media";
+@import "rwd";
 
-
+* {
+	box-sizing: border-box;
+}
 
 body, html {
-    color: black;
+    color: $font-color;
     background-color: white;
 	width: 100vw;
     margin: 0px auto;
-	box-sizing: border-box;
 	padding: 0;
 	//overflow-y: hidden;
 	//overflow-x: visible;
@@ -24,106 +27,164 @@ body, html {
 
 .menu-bar {
 	display:inline-flex;
+	position: fixed;
+	z-index: 99999;
+	top: 0px;
 	background-color: $main-color-blue;
 	border: 1px solid black;
-	justify-content:flex-end;
-	padding-right: 2em;
-	padding-left: 2em;
 	height: 3em;
 	a {
 		flex: 1;
-		padding-top: 1.3em;
+		display: none;
+		align-items: center;
+  		justify-content: center;
 		text-decoration: none;
 		text-align: right;
-		color: black;
+		color: $font-color;
+		&:first-child {
+			flex: 4;
+			text-align: left;
+			}
 		&:visited {
 			background-color: $main-color-blue;
 			color: white;
 		}
 		&:hover {
-			background-color: lighten($main-color-blue, 30%);
+			background-color: $sec-color-blue;
 			color: white;
 		}
-	}
-	img {
-		float: left;
 	}
 }
 
 .menu-btn {
 	width: 4em;
-	height: 2em;
-	font-size: 0.7em;
-	background-color: darkslategray;
-	color: white;
-	display: none;
+	height: auto;
+	background-color: $main-color-blue;
+	color: $font-color;
+	display: flex;
 	float: right;
+	border: 1px solid white;
+	padding-top: 1em;
 	&:hover {
-		background-color: darkgrey;
-		color: darkolivegreen;
-	}
-	
-	
+		background-color: $sec-color-blue;
+		color: $font-color;
+	}	
 }
-.footer-bar {
-	background-color: greenyellow;
-	border: 1px solid black;
-	height: 4em;
-}
-.about {
+.main-page {
 	background-image: url("../images/bg_1.jpg");
 	background-size: cover;
 	height: 100vh;
-	padding: 0;
+	color: $font-color;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	article {
+		width: 100%;
+		height: 25%;
+		font-size: 1.5em;
+		display: flex;
+		align-items: center;
+  		justify-content: center;
+		text-align: center;
+		margin: auto 0;
+		line-height: 1.5em;
+		background-color: rgba($sec-color-blue, 0.6);
+	}
+}	
+.about {
+	height: auto;
+	background-color:white;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.1em;
+	margin: 0;
 	.about_text {
-		vertical-align: middle;
-		margin: 0 auto;
-		width: 70%;
-		height: 30%;
-		background-color: rgba(139, 142, 140, 0.7);
-		font-size: 1em;
-		color: white;
+		width: 100vw;
+		height: auto;
+		color: $main-color-blue;
+		padding: 1em;
 	}
 	.about_text2 {
-	vertical-align:sub;
-	margin: 0 auto;
-	width: 60%;
-	height: 20%;
-	background-color: rgba(44, 94, 152, 0.79);
-	font-size: 1em;
-		color: white;
+		width: 100%;
+		background-color: rgba($main-color-blue, 0.79);
+		height: auto;
+		padding: 1em;
+		li {
+			margin-left: 0;
+		}
 	}
 }
 	.programs {
-		height: 100vh;
+		height: auto;
 		align-self: center;
-		background-color: $sec-color-green;
+		background-color: $main-color-blue;
 		display: flex;
 		flex-direction: column;
 		div {
+			max-width: 95%;
+			height: 15em;
 			display: flex;
 			margin: 1em;
 			flex-wrap: wrap;
 			flex-direction: column;
 			background-color: $main-color-blue;
-			border: 1px solid red;
-			color: white;
+			color: $font-color;
+			border: 2px solid $first-color-grey;
 			font-weight: bold;
 			text-align: center;
 			img {
 				width: 100px;
 				align-self: center;
-				transition: 1s;
 				padding-bottom: 1.2em;
-				&:hover {
-					transform: scale(1.1);
-				}
+				
 			}	
+			img:hover {
+					transform: scale(1.2);
+					transition: 1s;
+				}
 		}
 	}
 
-/*wersja responsywna start*/
+.how-do-we-work {
+	height: 11em;
+	background-color: $sec-color-green;
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+	.steps {
+		width: 90%;
+		height:6em;
+		background-color:black;
+		position: relative;
+			display: flex;
+			align-items: center;
+  			justify-content: center;
 
+		&:after {
+				top: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-color: rgba(213, 66, 13, 0);
+				border-top-color: #d5420d;
+				border-width: 50px;
+				margin-left: -50px;
+			}
+	}
+}
+
+.footer-bar {
+	display: flex;
+	background-color: greenyellow;
+	border: 1px solid black;
+	height: 4em;
+	align-self: center;
+}
 
 
 
