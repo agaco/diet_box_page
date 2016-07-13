@@ -22,6 +22,7 @@
 				<a href="#">Jak działamy</a>
 				<a href="#">Cennik</a>
 				<a href="#">Zamów dietę</a>
+				<a href="#">Logowanie</a>
 				<div class="menu-btn">MENU</div>
 			</div>
 		</div>
@@ -94,70 +95,97 @@
 		</div>
 		
 	<!-- SEKCJA PROGRAMY -->
-		<div class="row">
-			<div class="col-2 programs">
-			</div>
-			
-			<div class="col-2 col-m-6 col-xs-12 programs" id="wrap-2">
-				<div>
-					<img src="images/program1.png">
-					<p class="label">ZDROWE <br>ODCHUDZANIE</p>
+		<div class="row">	
+			<div class="col-4 col-m-12 col-xs-12 programs" id="wrap-2">
+				<!-- I KOLUMNA -->
+				<div class="tile" id="tile-1">
+					<p>ZDROWE ODCHUDZANIE</p>
 				</div>
-				<div>
-					<img src="images/program2.svg">
+				<div class="open" id="tile-1">
+					<p>Lorem ipsum lorem ipsum</p>
+				</div>
+				
+				
+				<div class="tile" id="tile-2">
 					<p>ZDROWA DIETA <br> NA CO DZIEŃ</p>
 				</div>
-			</div>
-			
-			<div class="col-2 col-m-6 col-xs-12 programs">
-				<div>
-					<img src="images/program3.png">
-					<p>PROGRAM <br>
-						WEGETERIAŃSKI</p>
+				<div class="open" id="tile-2">
+					<p>Lorem ipsum lorem ipsum</p>
 				</div>
-				<div>
-					<img src="images/program4.png">
-					<p>PROGRAM <br>ANTYCHOLERESTEROL</p>
-				</div>	
-			</div>
-			
-			<div class="col-2 col-m-6 col-xs-12 programs">
-				<div>
-					<img src="images/program5.png">
-					<p class="label">PROGRAM <br>ANTYCUKRZYCOWY</p>
-				</div>	
-				<div>
-					<img src="images/program6.png">
-					<p>ZDROWA DIETA <br>NA CO DZIEŃ</p>
-				</div>					
-			</div>
-			
-			<div class="col-2 col-m-6 col-xs-12 programs">
-				<div>
-					<img src="images/program7.png">
+				
+				
+				<div class="tile" id="tile-3">
 					<p>PROGRAM <br>DLA RODZINY</p>
 				</div>	
-				<div>
-					<img src="images/program8.png">
-					<p>PROGRAM <br>DO PRACY</p>
+				<div class="open" id="tile-3">
+					<p>Lorem ipsum lorem ipsum</p>
+				</div>
+				
+			</div>
+			
+			<!-- II KOLUMNA -->
+			<div class="col-4 col-m-12 col-xs-12 programs">
+				<div class="tile" id="tile-4">
+					<p>PROGRAM <br>WEGETERIAŃSKI</p>
+				</div>
+				<div class="open" id="tile-4">
+					<p>Lorem ipsum lorem ipsum</p>
+				</div>
+				
+				
+				<div class="tile" id="tile-5">
+					<p>PROGRAM <br>ANTYCHOLERESTEROL</p>
+				</div>	
+				<div class="open" id="tile-5">
+					<p>Lorem ipsum lorem ipsum</p>
+				</div>
+				
+				<div class="tile" id="tile-6">
+					<p>PROGRAM DO PRACY</p>
+				</div>
+				<div class="open" id="tile-6">
+					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 			</div>
-			<div class="col-2 programs">
-			</div>	
+			<!-- III KOLUMNA -->
+			<div class="col-4 col-m-12 col-xs-12 programs">
+				<div class="tile" id="tile-7">
+					<p class="label">PROGRAM <br>ANTYCUKRZYCOWY</p>
+				</div>	
+				<div class="open" id="tile-7">
+					<p>Lorem ipsum lorem ipsum</p>
+				</div>
+				
+				
+				<div class="tile" id="tile-8">
+					<p>ZDROWA DIETA <br>NA CO DZIEŃ</p>
+				</div>	
+				<div class="open" id="tile-8">
+					<p>Zdrowa dieta</p>
+				</div>
+				
+				<div class="tile" id="tile-9">
+					<p>PROGRAM <br>DO PRACY</p>
+				</div>
+				<div class="open" id="tile-9">
+					<p>Lorem ipsum lorem ipsum</p>
+				</div>
+			</div>
+			
 		</div>
 		
 		<!-- SEKCJA JAK DZIAŁAMY -->
 		<div class="row">
 			<div class="col-3 col-m-6 col-xs-12 how-do-we-work">
 				<div class="steps">
-					<div>WYBÓR PROGRAMU</div>
+					<div>WYBÓR <br>PROGRAMU</div>
 				</div>
 			</div>
 			<div class="col-3 col-m-6 col-xs-12 how-do-we-work">
 				<div class="steps">ZAMÓWIENIE</div>
 			</div>	
 			<div class="col-3 col-m-6 col-xs-12 how-do-we-work">
-				<div class="steps">DOSTAWA ZESTAWU</div>
+				<div class="steps">DOSTAWA <br>ZESTAWU</div>
 			</div>
 			<div class="col-3 col-m-6 col-xs-12 how-do-we-work">
 				<div class="steps">SMACZNEGO!</div>
@@ -165,15 +193,37 @@
 		</div>
 
 
-		
+	<!--FORM-->
+	<div class="row">
+		<div class="col-12 col-m-12 col-xs-12 form">
+			<h1>Skontaktuj się z nami</h1>
+			<form>
+				<label>Imię:</label> <br>
+				<input type="text" name="firstname" placeholder="Imię"><br>
+				
+				<label>Nazwisko:</label> <br>
+				<input type="text" name="lastname" placeholder="Nazwisko"><br>
+				
+				<label>Adres e-mail:</label> <br>
+				<input type="email" name="mail" placeholder="Adres@mail"><br>	
+				<p></p>
+				<textarea name="message" rows="10" cols="30" placeholder="Tekst wiadomości"></textarea> <br>
+				<input type="submit">
+			
+			</form>
+		</div>
+	</div>
 	
-		
 	<!-- FOOTER MENU -->
-	<footer class="col-12 footer-bar">
-	CONTACT 
+	<footer class="row">
+		<div class="col-12 col-m-12 col-xs-12 footer-bar-mob">
+			<a href="#">ADRES</a> <span> | </span>
+			<a href="#">KONTAKT</a> <span> | </span>
+			<a href="#">LOGOWANIE</a> 
+
 	</footer>
 	
-	</section>
+	
 	
 </body>
 </html>

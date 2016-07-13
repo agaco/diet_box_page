@@ -15,6 +15,17 @@ $(document).ready(function(){
 //	});
 	
 	
+$(".tile").on("click", function(event){
+	console.log("test");
+	$(this).hide().next().toggle().css("background-color", "rgba(215, 44, 44, 0.5)")
 	
-	
+//	animate({
+//		opacity: 0.3,
+//	},2000)	
+})	
+
+$(".open").on("click", function(event){
+	$(this).hide().prev().show()
+})
+
 });
