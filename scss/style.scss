@@ -27,8 +27,15 @@ body, html {
 	display:flex;
 	justify-content: flex-start;
 	align-self: center;
+	//padding: 0 2em;
 	color:white;
 	background-color: $main-color-blue;
+	p {
+		display: flex;
+		flex: 1;
+		justify-content: center;
+		align-self: center;
+	}
 }
 header {
 	position: fixed;
@@ -163,6 +170,10 @@ header {
 				color: $sec-font-color;
 				font-size: 1.6em;
 				text-shadow: 1px 1px $main-color-blue;
+				&:hover {
+					transform: scale(1.2, 1.2);
+					transition: 1.5s;
+				}
 			}
 		}
 		.open-prog {
@@ -172,6 +183,7 @@ header {
 			flex-wrap: wrap;
 			flex-direction: column;
 			background-color: $sec-color-blue;
+			background-blend-mode:soft-light;
 			font-weight: bold;
 			text-align: center;
 			color: $sec-font-color;
@@ -179,6 +191,8 @@ header {
 			p {
 				opacity: 1;
 				z-index: 999;
+				padding: 1em;
+				line-height: 1.5em;
 			}
 		}
 	}

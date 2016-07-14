@@ -1,29 +1,30 @@
 $(document).ready(function(){
+	
 var burgerButton = $('.menu-btn');
 var menuNav = $('.menu-bar');
 var menuA = menuNav.find("a")
 var body = $("html, body");
 
 	
-//PSGE SCROLLING	
-body.stop().animate({scrollTop: 0}, "500");
+//PAGE SCROLLING	
+	body.stop().animate({scrollTop: 0}, "500");
 	
 	menuA.on("click", function(event){
-        event.preventDefault;
-		//console.log($(this).attr("href"));
-        
-//       var jumpTo = $(this).attr("href");
-//       var position = $(jumpTo).position().top;
-//       
-//       body.stop().animate({scrollTop: position}, "1000");
-//        
+		event.preventDefault;
+		//console.log($(this).attr("href"));         
+		var jumpTo = $(this).attr("href");
+		var position = $(jumpTo).position().top;
+		body.stop().animate({scrollTop: position}, "2000");  
+		
+//		$.smoothScroll({
+//    		scrollElement: jumpTo,
+//			scrollTarget: position
+//  		});
+//  			return false
        
     });
-	
-	
-	
-	
-	
+$.smoothScroll();	
+
 	
 //HAMBURGER MENU
  
@@ -60,7 +61,8 @@ body.stop().animate({scrollTop: 0}, "500");
 //Kafelki - sekcja programy	
 $(".tile").on("click", function(event){
 	console.log("test");
-	$(this).hide().next().toggle().css("background-color", "rgba(215, 44, 44, 0.5)")
+	$(this).hide().next().fadeToggle("fast")
+		//.toggle().css("background-color", "rgba(215, 44, 44, 0.5)")
 	
 //	animate({
 //		opacity: 0.3,

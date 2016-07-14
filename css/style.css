@@ -188,17 +188,24 @@
 }
 
 @media screen and (orientation: landscape), screen and (min-width: 850px) {
-  .grid-container {
-    overflow: hidden;
-  }
   .grid-container .about {
     padding: 0 10%;
-    overflow: hidden;
+  }
+  .grid-container .main-page article {
+    font-size: 2.5em;
   }
   .grid-container .programs {
     height: 100vh;
     margin-top: 50px;
     margin-bottom: 50px;
+  }
+  .grid-container .programs .tile {
+    height: 29vh;
+    min-height: 15em;
+  }
+  .grid-container .programs .open-prog {
+    height: 29vh;
+    min-height: 15em;
   }
   .grid-container .how-do-we-work {
     margin-top: 100px;
@@ -234,6 +241,13 @@ body .whole-width, html .whole-width {
   align-self: center;
   color: white;
   background-color: #1E2537;
+}
+
+.menu-logo p {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-self: center;
 }
 
 header {
@@ -285,8 +299,9 @@ header {
 }
 
 .menu-bar a:hover {
-  background-color: #343A53;
   color: #fff;
+  transform: scale(1.1, 1.1);
+  transition: 0.7s;
 }
 
 .menu-bar p {
@@ -306,8 +321,9 @@ header {
 }
 
 .menu-bar p:hover {
-  background-color: #343A53;
   color: #fff;
+  transform: scale(1.1, 1.1);
+  transition: 0.7s;
 }
 
 .menu-for-desktop {
@@ -411,6 +427,11 @@ header {
   text-shadow: 1px 1px #1E2537;
 }
 
+.programs .tile p:hover {
+  transform: scale(1.2, 1.2);
+  transition: 1.5s;
+}
+
 .programs .open-prog {
   max-width: 100%;
   height: 16em;
@@ -418,6 +439,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   background-color: #343A53;
+  background-blend-mode: soft-light;
   font-weight: bold;
   text-align: center;
   color: #fff;
@@ -427,6 +449,8 @@ header {
 .programs .open-prog p {
   opacity: 1;
   z-index: 999;
+  padding: 1em;
+  line-height: 1.5em;
 }
 
 #tile-1 {
@@ -604,8 +628,9 @@ header {
 }
 
 .footer-bar-mob a:hover {
-  background-color: #343A53;
   color: #fff;
+  transform: scale(1.1, 1.1);
+  transition: 0.7s;
 }
 
 .footer-bar-mob p {
@@ -624,8 +649,9 @@ header {
 }
 
 .footer-bar-mob p:hover {
-  background-color: #343A53;
   color: #fff;
+  transform: scale(1.1, 1.1);
+  transition: 0.7s;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

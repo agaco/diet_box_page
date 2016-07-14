@@ -30,7 +30,9 @@
 		color: $sec-font-color;
 	}
 	&:hover {
-		background-color: $sec-color-blue;
+		//background-color: $sec-color-blue;
 		color: $sec-font-color;
+		transform: scale(1.1, 1.1);
+					transition: 0.7s;
 	}
 }
