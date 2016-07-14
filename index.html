@@ -11,19 +11,26 @@
 </head>
 <body>
 	<section class="whole-width grid-container">
-	<!-- NVBAR MENU -->
+	<!-- NVBAR MENU MOBILE -->
 	<header>
-		<div class="row">
-			<div class="col-12 menu-bar"> 
-				<a href="#">EASY DIET</a>
+		<div class="row menu-fixed">
+			<div class="col-m-3 col-m-3 col-xs-3 menu-logo">
+				<p>D.BOX</p>		
+			</div>
+			
+			<div class="col-m-9 col-xs-9 hamburger-menu">
+				<div class="menu-btn"></div>			
+			</div>
+	
+		<!-- NVBAR MENU DESKTOP -->
+			<div class="col-9 col-xs-12 col-m-9 menu-bar menu-for-mobile"> 
 				<a href="#wrap-1">O EasyDiet</a>
 				<a href="#wrap-2">Programy</a>
 				<a href="#">Menu</a>
-				<a href="#">Jak działamy</a>
+				<a href="#wrap-how-do-we-work-id">Jak działamy</a>
 				<a href="#">Cennik</a>
 				<a href="#">Zamów dietę</a>
-				<a href="#">Logowanie</a>
-				<div class="menu-btn">MENU</div>
+				<p class="log_btn">Logowanie</p> 
 			</div>
 		</div>
 	</header>
@@ -42,10 +49,10 @@
 		
 		
 		<!-- O EASY DIET -->
-		<div class="row">
-			<div class="col-12 col-m-12 col-xs-12 about"> 
+		<div class="row" id="wrap-1">
+			<div class="col-12 col-m-12 col-xs-12 about" > 
 				<div class="about_text">
-					<h1 id="wrap-1">
+					<h1 >
 					CATERING DIETETYCZNY EASYDIET
 					</h1>
 					<article>
@@ -95,13 +102,13 @@
 		</div>
 		
 	<!-- SEKCJA PROGRAMY -->
-		<div class="row">	
-			<div class="col-4 col-m-12 col-xs-12 programs" id="wrap-2">
+		<div class="row" id="wrap-2">	
+			<div class="col-4 col-m-12 col-xs-12 programs" >
 				<!-- I KOLUMNA -->
 				<div class="tile" id="tile-1">
 					<p>ZDROWE ODCHUDZANIE</p>
 				</div>
-				<div class="open" id="tile-1">
+				<div class="open-prog" id="tile-1">
 					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 				
@@ -109,7 +116,7 @@
 				<div class="tile" id="tile-2">
 					<p>ZDROWA DIETA <br> NA CO DZIEŃ</p>
 				</div>
-				<div class="open" id="tile-2">
+				<div class="open-prog" id="tile-2">
 					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 				
@@ -117,7 +124,7 @@
 				<div class="tile" id="tile-3">
 					<p>PROGRAM <br>DLA RODZINY</p>
 				</div>	
-				<div class="open" id="tile-3">
+				<div class="open-prog" id="tile-3">
 					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 				
@@ -128,7 +135,7 @@
 				<div class="tile" id="tile-4">
 					<p>PROGRAM <br>WEGETERIAŃSKI</p>
 				</div>
-				<div class="open" id="tile-4">
+				<div class="open-prog" id="tile-4">
 					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 				
@@ -136,14 +143,14 @@
 				<div class="tile" id="tile-5">
 					<p>PROGRAM <br>ANTYCHOLERESTEROL</p>
 				</div>	
-				<div class="open" id="tile-5">
+				<div class="open-prog" id="tile-5">
 					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 				
 				<div class="tile" id="tile-6">
 					<p>PROGRAM DO PRACY</p>
 				</div>
-				<div class="open" id="tile-6">
+				<div class="open-prog" id="tile-6">
 					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 			</div>
@@ -152,7 +159,7 @@
 				<div class="tile" id="tile-7">
 					<p class="label">PROGRAM <br>ANTYCUKRZYCOWY</p>
 				</div>	
-				<div class="open" id="tile-7">
+				<div class="open-prog" id="tile-7">
 					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 				
@@ -160,14 +167,14 @@
 				<div class="tile" id="tile-8">
 					<p>ZDROWA DIETA <br>NA CO DZIEŃ</p>
 				</div>	
-				<div class="open" id="tile-8">
+				<div class="open-prog" id="tile-8">
 					<p>Zdrowa dieta</p>
 				</div>
 				
 				<div class="tile" id="tile-9">
 					<p>PROGRAM <br>DO PRACY</p>
 				</div>
-				<div class="open" id="tile-9">
+				<div class="open-prog" id="tile-9">
 					<p>Lorem ipsum lorem ipsum</p>
 				</div>
 			</div>
@@ -175,8 +182,8 @@
 		</div>
 		
 		<!-- SEKCJA JAK DZIAŁAMY -->
-		<div class="row">
-			<div class="col-3 col-m-6 col-xs-12 how-do-we-work">
+		<div class="row" id="wrap-how-do-we-work-id">
+			<div class="col-3 col-m-6 col-xs-12 how-do-we-work" >
 				<div class="steps">
 					<div>WYBÓR <br>PROGRAMU</div>
 				</div>
@@ -192,10 +199,29 @@
 			</div>					
 		</div>
 
-
-	<!--FORM-->
+	<!--MAP & CONTACT -->
 	<div class="row">
-		<div class="col-12 col-m-12 col-xs-12 form">
+		<div class="col-12 col-m-12 col-xs-12 contact" id="wrap-contact"> 
+			<div id="map"></div>
+			<div class="adress">
+				<p>
+				Lorem Ipsum <br>
+				adress:<br>
+				Korem ipsum <br>
+				Poland <br>
+				
+				Mob. 666 666 666 <br>
+				
+				</p>
+			</div>
+		
+		</div>
+	</div>
+		
+		
+	<!--FORM-->
+	<div class="row" id="wrap-form">
+		<div class="col-7 col-m-12 col-xs-12 form" >
 			<h1>Skontaktuj się z nami</h1>
 			<form>
 				<label>Imię:</label> <br>
@@ -209,20 +235,32 @@
 				<p></p>
 				<textarea name="message" rows="10" cols="30" placeholder="Tekst wiadomości"></textarea> <br>
 				<input type="submit">
-			
 			</form>
 		</div>
+		<div class="col-5 form" ></div>
 	</div>
 	
 	<!-- FOOTER MENU -->
 	<footer class="row">
 		<div class="col-12 col-m-12 col-xs-12 footer-bar-mob">
-			<a href="#">ADRES</a> <span> | </span>
-			<a href="#">KONTAKT</a> <span> | </span>
-			<a href="#">LOGOWANIE</a> 
-
+			<a href="#wrap-contact">ADRES</a> <span> | </span>
+			<a href="#wrap-form">KONTAKT</a> <span> | </span>
+			<p class="log_btn">LOGOWANIE</p> 
 	</footer>
 	
+	<!--LOGOWANIE -->
+	<div class="row" id="wrap-log">
+		<div class="col-4 col-m-6 col-xs-12 logging" >
+			<form>
+				<label>Login: </label>
+				<input type="text" name="login" placeholder="Login"><br>
+				
+				<label>Hasło: </label>
+				<input type="password" name="password" placeholder="Hasło"><br>
+				<input type="submit" value="Zaloguj">
+			</form>
+		</div>
+	</div>
 	
 	
 </body>

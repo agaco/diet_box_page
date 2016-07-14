@@ -16,51 +16,81 @@ body, html {
 	width: 100vw;
     margin: 0px auto;
 	padding: 0;
-	//overflow-y: hidden;
-	//overflow-x: visible;
 	font-size: $default-font-size;
 	font-family: 'Lato', sans-serif;
 	.whole-width {
 		height: 100vh;
 	}
+	
+}
+.menu-logo {
+	display:flex;
+	justify-content: flex-start;
+	align-self: center;
+	color:white;
+	background-color: $main-color-blue;
+}
+header {
+	position: fixed;
+	top: 0px;
+	z-index:9999;
+	width: 100%;
+	height: 50px;
 }
 
-.menu-bar {
-	display:inline-flex;
-	position: fixed;
-	z-index: 99999;
-	top: 0px;
+.hamburger-menu {
+	display: flex;
+	color:white;
 	background-color: $main-color-blue;
-	border: 1px solid black;
-	height: 3em;
-	a {
-		flex: 1;
-		display: none;
-		align-items: center;
-  		justify-content: center;
-		@include ahref;
-		&:first-child {
-			flex: 4;
-			text-align: left;
-			}
-		
+	justify-content: flex-end;
+	.menu-btn {
+		background: url("../images/icon-hamburger-light.svg");
+  		background-size: 35px 36px;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: flex;
+		color: $font-color;
+		width: 13%;
+		clear: both;
 	}
 }
 
-.menu-btn {
-	width: 4em;
-	height: auto;
+.menu-bar {
+	display: none;
+	position: relative;
 	background-color: $main-color-blue;
-	color: $font-color;
-	display: flex;
-	float: right;
-	border: 1px solid white;
-	padding-top: 1em;
-	&:hover {
-		background-color: $sec-color-blue;
-		color: $font-color;
-	}	
+	height: 100%;
+	a {
+		//display: block;
+		flex: 1;
+		align-self: center;
+  		@include ahref;
+		text-align: center;
+		padding: 0.4em;
+	}
+	p {
+		//display: block;
+		flex: 1;
+		align-self: center;
+  		@include ahref;
+		text-align: center;
+		padding: 0.4em;
+		margin: 0;
+	}
 }
+.menu-for-desktop {
+	display: inline-flex;
+	a {
+		display: flex;
+	}
+}
+.menu-for-mobile {
+	display: inline-block;
+	a {
+		display: block
+	}
+}
+
 .main-page {
 	background-image: url("../images/bg_1.jpg");
 	background-size: cover;
@@ -85,13 +115,13 @@ body, html {
 }	
 .about {
 	height: auto;
+	margin-top: 50px;
 	background-color:white;
 	display: flex;
 	flex-direction: column;
 	font-size: 1.1em;
-	margin: 0;
 	.about_text {
-		width: 100vw;
+		width: 100%;
 		height: auto;
 		color: $main-color-blue;
 		padding: 1em;
@@ -112,9 +142,13 @@ body, html {
 		display: flex;
 		flex-direction: column;
 		align-content: center;
+		&:first-child {
+			margin-top: 50px;
+		}
 		.tile {
 			max-width: 100%;
-			height: 16em;
+			height: auto;
+			min-height: 16em;
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: column;
@@ -131,7 +165,7 @@ body, html {
 				text-shadow: 1px 1px $main-color-blue;
 			}
 		}
-		.open {
+		.open-prog {
 			max-width: 100%;
 			height: 16em;
 			display: flex;
@@ -185,16 +219,25 @@ body, html {
 	background-image: url("../images/tile9.jpg");
 	background-size: cover;
 }
-
+#wrap-how-do-we-work-id {
+	height: 100vh;
+	background-color: $main-color-blue;
+}
 .how-do-we-work {
-	height: 7em;
+	
 	background-color: $main-color-blue;
 	display: flex;
 	align-items: center;
   	justify-content: center;
+	&:first-child {
+		margin-top: 50px;
+	}
+	&:last-child {
+		margin-bottom: 50px;
+	}
 		.steps {
 		width: 90%;
-		height:100%;
+		min-height: 7em;
 		background-color: $main-color-blue;
 		position: relative;
 		display: flex;
@@ -202,41 +245,27 @@ body, html {
   		justify-content: center;
 		font-size: 1.3em;
 		&:after {
-				top: 75%;
-				left: 50%;
-				border: solid transparent;
-				content: " ";
-				height: 0;
-				width: 0;
-				position: absolute;
-				pointer-events: none;
-				border-color: rgba($first-color-grey, 0);
-				border-top-color: $first-color-grey;
-				border-width: 10px;
-				margin-left: -10px;
+			top: 75%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba($first-color-grey, 0);
+			border-top-color: $first-color-grey;
+			border-width: 10px;
+			margin-left: -10px;
 			z-index: 100;
-			}
+		}
 	}
 }
 
-.footer-bar-mob {
-	position: fixed;
-	z-index: 99999;
-	bottom: 0px;
-	background-color: $main-color-blue;
-	height: auto;
-	width: 100%;
-	align-self: center;
-	a{
-		@include ahref;
-		display: inline-block;
-		height: 100%;
-		margin: 0 auto;
-		padding: 0.4em;
-	}
-}
 .form {
 	background-color: $main-color-blue;
+	height: 100vh;
+	margin-top: 50px;
 	label {
 		line-height: 2em;
 	}
@@ -245,6 +274,7 @@ body, html {
 		padding: 0.5em;
 		background-color: whitesmoke;
 		box-shadow: 0px;
+		border: 0;
 	}
 	textarea {
 		width: 100%;
@@ -252,5 +282,61 @@ body, html {
 	}
 }
 
+.contact {
+	height: 100vh;
+	background-color: $main-color-blue;
+	margin: 0 auto;
+	display: flex;
+	
+	.adress {
+		width: 15%;
+		height: 20%;
+		display: flex;
+		align-self: center;
+  		justify-content: center;
+		vertical-align: middle;
+		flex: 1;
+		p {
+			text-align: center;
+		}
+	}
+}
 
-
+.logging {
+	height: 6em;
+	padding: 1em;
+	background-color: $main-color-blue;
+	position: fixed;
+	z-index: 100;
+	bottom: 50px;
+	right: 0px;
+	display: none;
+}
+//#wrap-log:target .logging {
+//	display: inline-block;
+//}
+.footer-bar-mob {
+	position: fixed;
+	z-index: 99999;
+	bottom: 0px;
+	background-color: $main-color-blue;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  	justify-content: center;
+	a{
+		@include ahref;
+		display: inline-block;
+		height: 100%;
+		margin: 0 auto;
+		padding: 0.4em;
+	}
+	p {
+		@include ahref;
+		display: inline-block;
+		height: 100%;
+		margin: 0 auto;
+		padding: 0.4em;
+	}
+}

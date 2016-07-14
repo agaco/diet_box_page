@@ -1,33 +1,75 @@
 .grid-container {
 	
+	
 	@media only screen and (min-width: 640px) {
 		/* For tablets: */
+//MENU___________________________________________________
+		.hamburger-menu {
+			display: none;	
+		}
 		.menu-bar {
-			&:first-child {
-				flex: 1;
-			}
+			//display: inline-flex;
 			a {
-				display: flex;
-			}
-			.menu-btn {
-				display: none;
+				//display: flex;
 			}
 		}
+// O EASY DIET___________________________________________
+		.about {
+			height: 100vh;
+			margin-bottom: 50px;
+			padding: 0 8%;
+		}
+//JAK DZIAŁAMY__________________________________________
+		.how-do-we-work {
+			&:first-child {
+				margin-top: 100px;
+			}
+			&:nth-child(2) {
+				margin-top: 100px;
+			}
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}	
 		.steps {
 			&:after {
 				transform: 
 					rotate(-90deg)
-					translate(33px, 90px);
-				
+					translate(40px, 90px);
 			}
 		}
+//KONTAKT_______________________________________________
+		.form {
+			height: 100vh;
+			padding: 0 8%;
+		}			
 	}
-	
+//___________________DESKTOP________________________________	
 	@media screen and (orientation: landscape),
 		   screen and (min-width: 850px) {
+		overflow: hidden;	   
+				
+		   
+// O EASY DIET___________________________________________
+		.about {
+			padding: 0 10%;
+			overflow: hidden;
+		}
+//PROGRAMY_____________________________________________
 		.programs { 
 			height: 100vh;
+			margin-top: 50px;
+			margin-bottom: 50px;
 		}
-
+//JAK DZIAŁAMY__________________________________________
+		.how-do-we-work {
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+//KONTAKT_______________________________________________
+		.form {
+			height: 100vh;
+			padding: 0 10%;
+		}
 	}
 }
