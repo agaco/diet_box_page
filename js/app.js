@@ -3,19 +3,20 @@ $(document).ready(function(){
 var burgerButton = $('.menu-btn');
 var menuNav = $('.menu-bar');
 var menuA = menuNav.find("a")
-var body = $("html, body");
-
+var body = $("html, body");	
 	
 //PAGE SCROLLING	
-	body.stop().animate({scrollTop: 0}, "500");
+	//body.stop().animate({scrollTop: 0}, 500);
 	
 	menuA.on("click", function(event){
-		event.preventDefault;
-		//console.log($(this).attr("href"));         
+		event.preventDefault();
+       
 		var jumpTo = $(this).attr("href");
 		var position = $(jumpTo).position().top;
-		body.stop().animate({scrollTop: position}, "2000");  
 		
+		body.animate({scrollTop: position + "px"}, 1500);  
+		
+	
 //		$.smoothScroll({
 //    		scrollElement: jumpTo,
 //			scrollTarget: position
@@ -23,7 +24,6 @@ var body = $("html, body");
 //  			return false
        
     });
-$.smoothScroll();	
 
 	
 //HAMBURGER MENU
@@ -31,7 +31,6 @@ $.smoothScroll();
     burgerButton.on('click', function(event) {
         //menuNav.slideToggle("slow");
 		menuNav.toggleClass("menu-for-mobile");
-        console.log('2');
     })
  
     $(window).on('resize load', function(event) {
@@ -62,10 +61,8 @@ $.smoothScroll();
 $(".tile").on("click", function(event){
 	console.log("test");
 	$(this).hide().next().fadeToggle("fast")
-		//.toggle().css("background-color", "rgba(215, 44, 44, 0.5)")
-	
-//	animate({
-//		opacity: 0.3,
+//		.animate({
+//		opacity: 1,
 //	},2000)	
 })	
 

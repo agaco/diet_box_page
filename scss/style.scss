@@ -18,24 +18,14 @@ body, html {
 	padding: 0;
 	font-size: $default-font-size;
 	font-family: 'Lato', sans-serif;
-	.whole-width {
+		.whole-width {
 		height: 100vh;
 	}
 	
 }
-.menu-logo {
-	display:flex;
-	justify-content: flex-start;
-	align-self: center;
-	//padding: 0 2em;
-	color:white;
-	background-color: $main-color-blue;
-	p {
-		display: flex;
-		flex: 1;
-		justify-content: center;
-		align-self: center;
-	}
+body {
+	overflow-x: hidden; 
+	//overflow-y: hidden;
 }
 header {
 	position: fixed;
@@ -44,7 +34,22 @@ header {
 	width: 100%;
 	height: 50px;
 }
-
+.menu-logo {
+	display:flex;
+	justify-content: flex-start;
+	align-self: center;
+	color:white;
+	background-color: $main-color-blue;
+	a {
+		text-decoration: none;
+		color: $sec-font-color;
+		font-size: 1.4em;
+		display: flex;
+		flex: 1;
+		justify-content: center;
+		align-self: center;
+	}
+}
 .hamburger-menu {
 	display: flex;
 	color:white;
@@ -98,6 +103,7 @@ header {
 	}
 }
 
+//GŁOWNA____________
 .main-page {
 	background-image: url("../images/bg_1.jpg");
 	background-size: cover;
@@ -119,7 +125,9 @@ header {
 		line-height: 1.5em;
 		background-color: rgba($sec-color-blue, 0.6);
 	}
-}	
+}
+
+//O_D.BOX____________
 .about {
 	height: auto;
 	margin-top: 50px;
@@ -143,6 +151,7 @@ header {
 		}
 	}
 }
+//PROGRAMY____________
 	.programs {
 		height: auto;
 		align-self: center;
@@ -187,9 +196,8 @@ header {
 			font-weight: bold;
 			text-align: center;
 			color: $sec-font-color;
-			display: none;		
+			display: none;	
 			p {
-				opacity: 1;
 				z-index: 999;
 				padding: 1em;
 				line-height: 1.5em;
@@ -237,6 +245,16 @@ header {
 	height: 100vh;
 	background-color: $main-color-blue;
 }
+
+//MENU___________________
+.menu {
+	background-color: darksalmon;
+	height: 100vh;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+//JAK_DZIALAMY____________
 .how-do-we-work {
 	
 	background-color: $main-color-blue;
@@ -275,24 +293,43 @@ header {
 		}
 	}
 }
-
-.form {
-	background-color: $main-color-blue;
+//CENNIK____________
+.pricing {
+	background-color: darkcyan;
 	height: 100vh;
 	margin-top: 50px;
+	margin-bottom: 50px;
+}
+//ZAMOW DIETE____________
+.order {
+	background-color: cornflowerblue;
+	height: 100vh;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+//KONTAKT____________
+.form {
+	background-color: #fff;
+	height: 100vh;
+	margin-top: 50px;
+	color: $sec-color-blue;
+	padding: 0 1em;
 	label {
 		line-height: 2em;
 	}
 	input {
-		width: 100%;
-		padding: 0.5em;
-		background-color: whitesmoke;
+		width: 80%;
+		padding: 1em;
+		background-color: #fff;
 		box-shadow: 0px;
-		border: 0;
+		border: 1px solid main-color-blue;
+		margin: 1em;
 	}
 	textarea {
-		width: 100%;
+		width: 80%;
 		font-family: 'Lato', sans-serif;
+		margin: 1em;
 	}
 }
 
