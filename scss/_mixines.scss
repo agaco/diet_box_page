@@ -6,13 +6,13 @@
  }
 
 
-@mixin littleCircle ($size, $color) {
+@mixin scrollButton ($size) {
 	border-radius: 50%; 
 	-webkit-border-radius: 50%; 
 	-moz-border-radius: 50%;
 	width: $size;
 	height: $size;
-	background-color: $color;
+	background-color: rgba(255, 252, 255, 0.7);
 }
 
 @mixin button ($width, $height) {

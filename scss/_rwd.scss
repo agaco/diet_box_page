@@ -3,16 +3,6 @@
 	
 	@media only screen and (min-width: 640px) {
 		/* For tablets: */
-//MENU____________________
-		.hamburger-menu {
-			display: none;	
-		}
-		.menu-bar {
-			//display: inline-flex;
-			a {
-				//display: flex;
-			}
-		}
 // O EASY DIET____________
 		.about {
 			height: 100vh;
@@ -44,11 +34,32 @@
 			padding: 0 8%;
 		}			
 	}
-//___________________DESKTOP________________________________	
+//___________________DESKTOP___________________________________________________________________________________________	
 	@media screen and (orientation: landscape),
 		   screen and (min-width: 850px) {
 			  // overflow-x: hidden;
 		   
+//MENU____________________
+		.hamburger-menu {
+			display: none;	
+		}
+		.menu-bar {
+			//display: inline-flex;
+			a {
+				//display: flex;
+			}
+		}
+
+//MAIN_PAGE_______________________________	
+
+		.main-page {
+			article {
+				text-shadow: 1px 1px $main-color-blue;
+				font-size: 4em;
+			}
+			   }
+			   
+
 // O EASY DIET_____________
 		.about {
 			padding: 0 10%;

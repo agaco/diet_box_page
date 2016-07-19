@@ -160,9 +160,6 @@
   .grid-container {
     /* For tablets: */
   }
-  .grid-container .hamburger-menu {
-    display: none;
-  }
   .grid-container .about {
     height: 100vh;
     margin-bottom: 50px;
@@ -187,6 +184,13 @@
 }
 
 @media screen and (orientation: landscape), screen and (min-width: 850px) {
+  .grid-container .hamburger-menu {
+    display: none;
+  }
+  .grid-container .main-page article {
+    text-shadow: 1px 1px #1E2537;
+    font-size: 4em;
+  }
   .grid-container .about {
     padding: 0 10%;
   }
@@ -221,7 +225,7 @@
 }
 
 body, html {
-  color: #D4CBC2;
+  color: #fff;
   background-color: white;
   width: 100vw;
   margin: 0px auto;
@@ -236,6 +240,7 @@ body .whole-width, html .whole-width {
 
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 header {
@@ -277,9 +282,9 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  color: #D4CBC2;
+  color: #fff;
   width: 13%;
-  clear: both;
+  margin-right: 1em;
 }
 
 .menu-bar {
@@ -287,6 +292,8 @@ header {
   position: relative;
   background-color: #1E2537;
   height: 100%;
+  padding-left: 3em;
+  padding-right: 10%;
 }
 
 .menu-bar a {
@@ -295,8 +302,8 @@ header {
   text-decoration: none;
   text-align: right;
   color: #fff;
-  text-align: center;
-  padding: 0.4em;
+  text-align: right;
+  height: 100%;
 }
 
 .menu-bar a:visited {
@@ -316,8 +323,7 @@ header {
   text-decoration: none;
   text-align: right;
   color: #fff;
-  text-align: center;
-  padding: 0.4em;
+  text-align: right;
   margin: 0;
 }
 
@@ -352,7 +358,7 @@ header {
   background-image: url("../images/bg_1.jpg");
   background-size: cover;
   height: 100vh;
-  color: #D4CBC2;
+  color: #fff;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -419,7 +425,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   background-color: #1E2537;
-  color: #D4CBC2;
+  color: #fff;
   font-weight: bold;
   text-align: center;
 }
@@ -503,7 +509,7 @@ header {
   background-size: cover;
 }
 
-#wrap-how-do-we-work-id {
+#wrap-4 {
   height: 100vh;
   background-color: #1E2537;
 }
@@ -518,6 +524,7 @@ header {
 .how-do-we-work {
   background-color: #1E2537;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -532,7 +539,7 @@ header {
 
 .how-do-we-work .steps {
   width: 90%;
-  min-height: 7em;
+  min-height: 6em;
   background-color: #1E2537;
   position: relative;
   display: flex;
@@ -557,6 +564,19 @@ header {
   z-index: 100;
 }
 
+.how-do-we-work .steps:hover + .steps-next {
+  display: flex;
+}
+
+.how-do-we-work .steps-next {
+  background-color: rgba(172, 248, 155, 0.2);
+  min-height: 3em;
+  height: 20%;
+  width: 50%;
+  box-shadow: inset 0px 0px 48px -6px rgba(30, 37, 55, 0.93);
+  display: none;
+}
+
 .pricing {
   background-color: darkcyan;
   height: 100vh;
@@ -575,27 +595,36 @@ header {
   background-color: #fff;
   height: 100vh;
   margin-top: 50px;
+  margin-bottom: 50px;
   color: #343A53;
   padding: 0 1em;
-}
-
-.form label {
-  line-height: 2em;
 }
 
 .form input {
   width: 80%;
   padding: 1em;
   background-color: #fff;
-  box-shadow: 0px;
-  border: 1px solid main-color-blue;
+  box-shadow: none;
   margin: 1em;
+}
+
+.form input:focus {
+  outline-color: #343A53;
+}
+
+.form input[type="submit"] {
+  border-radius: 0;
 }
 
 .form textarea {
   width: 80%;
   font-family: 'Lato', sans-serif;
   margin: 1em;
+  margin-top: 1.5em;
+}
+
+.form textarea:focus {
+  outline-color: #343A53;
 }
 
 .contact {
@@ -628,6 +657,63 @@ header {
   bottom: 50px;
   right: 0px;
   display: none;
+}
+
+.scroll_btns {
+  position: fixed;
+  bottom: 50px;
+  right: 7px;
+  padding-left: 1%;
+}
+
+.scroll_btns .scroll-btn-up {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 252, 255, 0.7);
+  float: right;
+}
+
+.scroll_btns .scroll-btn-up:after {
+  bottom: 26px;
+  right: 7px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: white;
+  border-width: 13px;
+  margin-left: -13px;
+}
+
+.scroll_btns .scroll-btn-down {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 252, 255, 0.7);
+  float: right;
+}
+
+.scroll_btns .scroll-btn-down:after {
+  top: 20px;
+  right: 48px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: white;
+  border-width: 13px;
+  margin-left: -13px;
 }
 
 .footer-bar-mob {

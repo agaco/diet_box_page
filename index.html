@@ -8,8 +8,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="js/app.js"></script> 
-	<script src="js/jquery.smooth-scroll.js"></script>
-
+	<script src="js/jquery.scrollify.js"></script>
+	<!--option
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>  
+	-->
 	
 </head>
 <body>
@@ -26,7 +28,7 @@
 			</div>
 	
 		<!-- NVBAR MENU DESKTOP -->
-			<div class="col-9 col-xs-12 col-m-9 menu-bar menu-for-mobile"> 
+			<div class="col-9 col-xs-12 col-m-12 menu-bar menu-for-mobile"> 
 				<a href="#wrap-1">O EasyDiet</a>
 				<a href="#wrap-2">Programy</a>
 				<a href="#wrap-3">Menu</a>
@@ -39,7 +41,7 @@
 	</header>
 	
 		<!-- STRONA GŁÓWNA -->
-		<div class="row" id="wrap-0">
+		<div class="row scroll-plug" id="wrap-0">
 			<div class="col-12 col-m-12 col-xs-12 main-page"> 
 				<article>
 					CATERING DIETETYCZNY <br>
@@ -52,7 +54,7 @@
 		
 		
 		<!-- O EASY DIET -->
-		<div class="row" id="wrap-1">
+		<div class="row scroll-plug" id="wrap-1">
 			<div class="col-12 col-m-12 col-xs-12 about" > 
 				<div class="about_text">
 					<h1 >
@@ -105,7 +107,7 @@
 		</div>
 		
 	<!-- SEKCJA PROGRAMY -->
-		<div class="row" id="wrap-2">	
+		<div class="row scroll-plug" id="wrap-2">	
 			<div class="col-4 col-m-12 col-xs-12 programs" >
 				<!-- I KOLUMNA -->
 				<div class="tile" id="tile-1">
@@ -186,7 +188,7 @@
 		
 			
 	<!-- SEKCJA MENU -->
-		<div class="row" id="wrap-3">	
+		<div class="row scroll-plug" id="wrap-3">	
 			<div class="col-12 col-m-12 col-xs-12 menu" >
 				<p>Vestibulum lacus ex, ultrices ac lacus sed, placerat pulvinar nibh. Aenean ut ullamcorper ante. Nam quis lorem quis arcu ornare auctor. Nulla ultrices, libero elementum laoreet tristique, diam metus vestibulum tortor, ut posuere lacus eros id dui. Suspendisse nisl lacus, venenatis id dolor et, ultricies egestas sapien. In hac habitasse platea dictumst. Quisque sodales varius fermentum. Integer vel nunc eget odio blandit feugiat. Integer imperdiet erat quis bibendum pharetra. Fusce sed dui eros. Morbi eget scelerisque nisl. Praesent tempus auctor interdum. Nulla sed quam luctus, blandit felis sit amet, fermentum justo.</p>
 			</div>
@@ -195,40 +197,44 @@
 				
 				
 		<!-- SEKCJA JAK DZIAŁAMY -->
-		<div class="row" id="wrap-4">
+		<div class="row scroll-plug" id="wrap-4">
 			<div class="col-3 col-m-6 col-xs-12 how-do-we-work" >
 				<div class="steps">
 					<div>WYBÓR <br>PROGRAMU</div>
 				</div>
+				<div class="steps-next"> Lorem ipsum tak działamy</div>
 			</div>
 			<div class="col-3 col-m-6 col-xs-12 how-do-we-work">
 				<div class="steps">ZAMÓWIENIE</div>
+				<div class="steps-next"> Lorem ipsum tak działamy</div>
 			</div>	
 			<div class="col-3 col-m-6 col-xs-12 how-do-we-work">
 				<div class="steps">DOSTAWA <br>ZESTAWU</div>
+				<div class="steps-next"> Lorem ipsum tak działamy</div>
 			</div>
 			<div class="col-3 col-m-6 col-xs-12 how-do-we-work">
 				<div class="steps">SMACZNEGO!</div>
+				<div class="steps-next"> Lorem ipsum tak działamy</div>
 			</div>					
 		</div>
 
 		
 	<!-- SEKCJA CENNIK -->
-		<div class="row" id="wrap-5">	
+		<div class="row scroll-plug" id="wrap-5">	
 			<div class="col-12 col-m-12 col-xs-12 pricing" >
 				<p>Vestibulum lacus ex, ultrices ac lacus sed, placerat pulvinar nibh. Aenean ut ullamcorper ante. Nam quis lorem quis arcu ornare auctor. Nulla ultrices, libero elementum laoreet tristique, diam metus vestibulum tortor, ut posuere lacus eros id dui. Suspendisse nisl lacus, venenatis id dolor et, ultricies egestas sapien. In hac habitasse platea dictumst. Quisque sodales varius fermentum. Integer vel nunc eget odio blandit feugiat. Integer imperdiet erat quis bibendum pharetra. Fusce sed dui eros. Morbi eget scelerisque nisl. Praesent tempus auctor interdum. Nulla sed quam luctus, blandit felis sit amet, fermentum justo.</p>
 			</div>
 		</div>
 	
 	<!-- SEKCJA ZAMOW DIETE -->
-		<div class="row" id="wrap-6">	
+		<div class="row scroll-plug" id="wrap-6">	
 			<div class="col-12 col-m-12 col-xs-12 order" >
 				<p>Vestibulum lacus ex, ultrices ac lacus sed, placerat pulvinar nibh. Aenean ut ullamcorper ante. Nam quis lorem quis arcu ornare auctor. Nulla ultrices, libero elementum laoreet tristique, diam metus vestibulum tortor, ut posuere lacus eros id dui. Suspendisse nisl lacus, venenatis id dolor et, ultricies egestas sapien. In hac habitasse platea dictumst. Quisque sodales varius fermentum. Integer vel nunc eget odio blandit feugiat. Integer imperdiet erat quis bibendum pharetra. Fusce sed dui eros. Morbi eget scelerisque nisl. Praesent tempus auctor interdum. Nulla sed quam luctus, blandit felis sit amet, fermentum justo.</p>
 			</div>
 		</div>	
 		
 	<!--MAP & CONTACT -->
-	<div class="row">
+	<div class="row scroll-plug">
 		<div class="col-12 col-m-12 col-xs-12 contact" id="wrap-contact"> 
 			<div id="map"></div>
 			<div class="adress">
@@ -248,7 +254,7 @@
 		
 		
 	<!--FORM-->
-	<div class="row" id="wrap-form">
+	<div class="row scroll-plug" id="wrap-form">
 		<div class="col-7 col-m-12 col-xs-12 form" >
 			<h1>Skontaktuj się z nami</h1>
 			<form>
@@ -257,7 +263,6 @@
 				<input type="text" name="lastname" placeholder="Nazwisko"><br>
 				
 				<input type="email" name="mail" placeholder="Adres@mail"><br>	
-				<p></p>
 				<textarea name="message" rows="10" cols="30" placeholder="Tekst wiadomości"></textarea> <br>
 				<input type="submit">
 			</form>
@@ -287,6 +292,12 @@
 		</div>
 	</div>
 	
-	
+	<!-- SCROLL BUTTONS-->
+	<div class="row">
+		<div class="col-1 col-m-2 col-xs-4 scroll_btns" >
+			<div class="scroll-btn-up"></div>
+		</div>
+	</div>
+		
 </body>
 </html>
