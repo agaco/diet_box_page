@@ -515,10 +515,15 @@ header {
 }
 
 .menu {
-  background-color: darksalmon;
+  background-color: white;
   height: 100vh;
   margin-top: 50px;
   margin-bottom: 50px;
+  color: black;
+}
+
+.menu p {
+  margin: 1em 1em;
 }
 
 .how-do-we-work {
@@ -649,7 +654,7 @@ header {
 }
 
 .logging {
-  height: 6em;
+  height: 7em;
   padding: 1em;
   background-color: #1E2537;
   position: fixed;
@@ -657,6 +662,27 @@ header {
   bottom: 50px;
   right: 0px;
   display: none;
+}
+
+.logging label {
+  display: block;
+  padding: 0.3em 1em;
+}
+
+.logging input[type="submit"] {
+  background-color: #D4CBC2;
+  color: black;
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  top: 2em;
+  right: 6em;
+  height: 4em;
+  width: 6em;
+}
+
+.logging input[type="text"], .logging input[type="password"] {
+  padding: 0.5em;
 }
 
 .scroll_btns {

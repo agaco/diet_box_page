@@ -9,10 +9,6 @@ gulp.task('jshint', function() {
 	.pipe(jshint.reporter('default'))
 });
 
-gulp.task('pranie', function() {
-console.log('robię pranie');
-});
-
 gulp.task('sass', function() {
 	return gulp.src('scss/*.scss')
 	.pipe(sourcemaps.init())
@@ -23,12 +19,6 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest('css'))
 });
 
-
 gulp.task('watch', function(){
 	gulp.watch('scss/*.scss', ['sass']);
 })
-
-
-gulp.task("pranie", function(){
-	console.log("robie pranie");
-});

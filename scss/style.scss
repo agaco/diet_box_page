@@ -251,10 +251,14 @@ header {
 
 //MENU___________________
 .menu {
-	background-color: darksalmon;
+	background-color: white;
 	height: 100vh;
 	margin-top: 50px;
 	margin-bottom: 50px;
+	color: black;
+	p {
+		margin: 1em 1em;
+	}
 }
 
 //JAK_DZIALAMY____________
@@ -378,7 +382,7 @@ header {
 }
 //LOGOWANIE_________________
 .logging {
-	height: 6em;
+	height: 7em;
 	padding: 1em;
 	background-color: $main-color-blue;
 	position: fixed;
@@ -386,6 +390,24 @@ header {
 	bottom: 50px;
 	right: 0px;
 	display: none;
+	label {
+		display: block;
+		padding: 0.3em 1em;
+	}
+	input[type="submit"] {
+		background-color: $first-color-grey;
+		color: black;
+		text-decoration: none;
+		border: none;
+		position: absolute;
+		top: 2em;
+		right: 6em;
+		height: 4em;
+		width: 6em;
+	}
+	input[type="text"], input[type="password"] {
+		padding: 0.5em;
+	}
 }
 //#wrap-log:target .logging {
 //	display: inline-block;
